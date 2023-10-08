@@ -7,7 +7,6 @@ import 'package:audioplayers/audioplayers.dart';
 class NumbersScreen extends StatelessWidget {
   NumbersScreen({super.key});
 
- 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,11 +31,10 @@ class NumbersScreen extends StatelessWidget {
                 img: e.img,
                 enName: e.englishName,
                 jpName: e.japanName,
-                onTap: () async {
+                onTap: () {
                   final player = AudioPlayer();
-                  await player.play(AssetSource(e.sound));
-
-                 },  
+                  player.play(AssetSource(e.sound));
+                },
               ),
             ),
           ),

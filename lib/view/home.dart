@@ -1,8 +1,8 @@
-import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:toku_app/view/family_members.dart';
 import 'package:toku_app/view/number_screen.dart';
+import 'package:toku_app/view/pharases_screen.dart';
 import 'package:toku_app/widget/category_widget.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -60,7 +60,12 @@ class HomeScreen extends StatelessWidget {
           CategoryWidget(
             categText: 'Pharases',
             categColor: const Color.fromARGB(227, 209, 158, 6),
-            onTap: () {},
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => PharasesScreen()),
+              );
+            },
           ),
         ],
       ),
